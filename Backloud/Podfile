@@ -1,0 +1,23 @@
+platform :ios, "7.0"
+
+log_level = 'VERBOSE_LOG=1' #'WARN_LOG=1 etc'
+
+def import_pods
+    pod 'libextobjc'
+    pod 'CocoaLumberjack', '~> 1.9.1'
+    pod 'ReactiveCocoa'
+    pod 'Reachability'
+    pod 'JSONKit-NoWarning', :git => "https://github.com/ignazioc/JSONKit-NoWarning"
+
+end
+
+target "Backloud" do
+    import_pods
+    #pod 'CocoaAsyncSocket'
+    pod 'LumberjackConsole', '~> 2.0.2'             # display the console view from within the app (can be only for debug mode)
+end
+
+target "BackloutTests" do
+   #pod 'GHUnit', '~> 0.5'
+end
+ 
